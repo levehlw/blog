@@ -3,11 +3,11 @@
   <title>Leve</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://levehlw.github.io/blog/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2021-06-10T06:56:25.292Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://levehlw.github.io/blog/"/>
+  <updated>2021-06-15T06:08:14.594Z</updated>
+  <id>https://levehlw.github.io/blog/</id>
   
   <author>
     <name>Leve</name>
@@ -17,9 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vue（2）</title>
+    <link href="https://levehlw.github.io/blog/2021/06/15/vue%EF%BC%882%EF%BC%89/"/>
+    <id>https://levehlw.github.io/blog/2021/06/15/vue%EF%BC%882%EF%BC%89/</id>
+    <published>2021-06-15T06:07:30.000Z</published>
+    <updated>2021-06-15T06:08:14.594Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="class与style绑定"><a href="#class与style绑定" class="headerlink" title="class与style绑定"></a>class与style绑定</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:class=&quot;&#123;active: isActive&#125;&quot;&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">data()&#123;</span><br><span class="line">return&#123;</span><br><span class="line">isActive: true</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>绑定内联样式：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;&#123; color: activeColor, fontSize: fontSize + &#x27;px&#x27; &#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">data: &#123;</span><br><span class="line">  activeColor: &#x27;red&#x27;,</span><br><span class="line">  fontSize: 30</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><p>v-if指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-if=&quot;awesome&quot;&gt;</span><br><span class="line">    leve is awesome </span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>使用template作为不可见元素包裹多个需要条件渲染的区块。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;template v-if=&quot;ok&quot;&gt;</span><br><span class="line">  &lt;h1&gt;Title&lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;Paragraph 1&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;Paragraph 2&lt;/p&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure><h4 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h4><p>v-show决定隐藏还是显示一个元素，但是元素始终会被渲染且保留在DOM中，v-show类似css中的visible属性，v-if为false时类似于disable:false。</p><blockquote><p>注意，<code>v-show</code> 不支持 <code>&lt;template&gt;</code> 元素，也不支持 <code>v-else</code>。</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 v-show=&quot;ok&quot;&gt;Hello!&lt;/h1&gt;</span><br></pre></td></tr></table></figure><p>不同的是带有 <code>v-show</code> 的元素始终会被渲染并保留在 DOM 中。<code>v-show</code> 只是简单地切换元素的 CSS property <code>display</code>。一般来说，**<code>v-if</code> 有更高的切换开销**，而 <strong><code>v-show</code> 有更高的初始渲染开销</strong>。因此，如果需要非常频繁地切换，则使用 <code>v-show</code> 较好；如果在运行时条件很少改变，则使用 <code>v-if</code> 较好。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;class与style绑定&quot;&gt;&lt;a href=&quot;#class与style绑定&quot; class=&quot;headerlink&quot; title=&quot;class与style绑定&quot;&gt;&lt;/a&gt;class与style绑定&lt;/h3&gt;&lt;figure class=&quot;highlight plai</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://levehlw.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="vue" scheme="https://levehlw.github.io/blog/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sass入门（二）</title>
-    <link href="http://example.com/2021/06/10/Sass%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://example.com/2021/06/10/Sass%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <link href="https://levehlw.github.io/blog/2021/06/10/Sass%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://levehlw.github.io/blog/2021/06/10/Sass%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
     <published>2021-06-10T03:39:39.000Z</published>
     <updated>2021-06-10T06:56:25.292Z</updated>
     
@@ -33,17 +57,17 @@
     
     
     
-    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://levehlw.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="css" scheme="http://example.com/tags/css/"/>
+    <category term="css" scheme="https://levehlw.github.io/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>sass入门（一）</title>
-    <link href="http://example.com/2021/06/09/scss%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://example.com/2021/06/09/scss%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <link href="https://levehlw.github.io/blog/2021/06/09/scss%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://levehlw.github.io/blog/2021/06/09/scss%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2021-06-09T11:46:00.000Z</published>
     <updated>2021-06-10T03:41:31.033Z</updated>
     
@@ -62,10 +86,10 @@
     
     
     
-    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://levehlw.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="css" scheme="http://example.com/tags/css/"/>
+    <category term="css" scheme="https://levehlw.github.io/blog/tags/css/"/>
     
   </entry>
   
